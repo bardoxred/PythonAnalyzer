@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,9 @@ SECRET_KEY = "django-insecure-^_o#jf6q15u30eg4(lj8_crfv%**mds@r24_81$&*db))35e(o
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+# Static base dir
+STATIC_URL = "static/"
+STATICFILES_DIRS = [BASE_DIR / "WebApplication" / "static"]
 
 # Application definition
 
@@ -54,7 +56,7 @@ ROOT_URLCONF = "Main.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'WebApplication' / 'templates'],
+        "DIRS": [BASE_DIR / "WebApplication" / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
