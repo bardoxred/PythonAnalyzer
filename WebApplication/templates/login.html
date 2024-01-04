@@ -9,20 +9,37 @@
     <link rel="stylesheet" , type="text/css" , href="{% static 'css/login.css' %}">
 </head>
 
+
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form>
-            <label>Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label>Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit">Sign in</button>
-        </form>
-        <div class="register">
-            <a href="#">Register account</a>
-        </div>
+
+<header>
+    <div class="logo">
+        <a href="../">
+            <img src="../static/images/logo.png" alt="App Logo">
+        </a>
     </div>
+    <h1>Test app</h1>
+    <p>Welcome to the best app ever!</p>
+</header>
+
+<div class="login-container">
+    <h1>Login</h1>
+    <form>
+        <label>Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label>Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Sign in</button>
+    </form>
+    <div class="register">
+        <a href="#">Register account</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Test app. All rights reserved.</p>
+</footer>
+
 </body>
 
 </html>
