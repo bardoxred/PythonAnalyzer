@@ -6,16 +6,10 @@
     <title>Main Page</title>
     <link rel="stylesheet" , type="text/css" , href="{% static 'css/main.css' %}">
 </head>
+
 <body>
 
-<header>
-    <div class="logo">
-        <a href="">
-            <img src="../static/images/logo.png" alt="App Logo">
-        </a>
-    </div>
-    <h1>Python Analyzer</h1>
-</header>
+{% include 'header.html' %}
 
 <div class="features">
     <h2>Key Features</h2>
@@ -26,9 +20,7 @@
     </ul>
 </div>
 
-<footer>
-    <p>&copy; 2024 Test app. All rights reserved.</p>
-</footer>
+{% include 'footer.html' %}
 
 </body>
 </html>
