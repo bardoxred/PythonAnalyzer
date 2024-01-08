@@ -1,0 +1,25 @@
+header {
+  height: 100px;
+  background-color: #4caf50;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+.logo {
+  position: absolute;
+}
+
+header h1 {
+  font-size: 44px;
+  color: #282c35;
+  padding-top: 30px;
+  text-align: center;
+  margin: 0;
+}
