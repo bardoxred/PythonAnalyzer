@@ -7,43 +7,33 @@ body {
     height: 100vh;
 }
 
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.login-container {
-    margin: auto;
-    margin-top: 20vh;
+.registration-form {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 300px;
+    width: 500px;
     text-align: center;
+    margin: auto;
+    margin-top: 20vh;
+}
+
+.registration-form h1 {
+    color: #4caf50;
+    font-size: 35px;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
     color: #333;
 }
 
-.login-container h1 {
-    color: #4caf50;
-    font-size: 28px;
-}
-
-.login-container label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-.login-container input {
+.registration-form input {
     width: 100%;
     padding: 5px;
-    margin-bottom: 10px;
+    height: 30px;
+    margin-bottom: 15px;
     box-sizing: border-box;
     border: 1px solid #4caf50;
     border-radius: 4px;
@@ -51,7 +41,33 @@ label {
     color: #333;
 }
 
-.login-container button {
+.password-container {
+    position: relative;
+    display: flex;
+}
+
+.password-input {
+    flex: 1;
+    padding: 20px;
+}
+
+.toggle-password-button {
+    background-color: #45a020;
+    color: #fff;
+    height: 30px;
+    width: 50px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.toggle-password-button:hover {
+    background: #4caf50;
+}
+
+.register-button {
     background: #45a020;
     color: #fff;
     padding: 10px 18px;
@@ -65,21 +81,6 @@ label {
     transition: background 1s ease;
 }
 
-.login-container button:hover {
+.register-button:hover {
     background: #4caf50;
-}
-
-.register {
-    text-align: center;
-    margin-top: 15px;
-    color: #555;
-}
-
-.register a {
-    color: #4caf50;
-    text-decoration: none;
-}
-
-.register a:hover {
-    text-decoration: underline;
 }
