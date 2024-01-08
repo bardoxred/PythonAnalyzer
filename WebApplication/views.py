@@ -7,6 +7,10 @@ def main_view(request):
     return render(request, "main.html")
 
 
+def register(request):
+    return render(request, "register.html")
+
+
 def login_view(request):
     if request.method == "POST":
         username = request.POST["username"]
