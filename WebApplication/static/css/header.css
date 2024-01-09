@@ -1,25 +1,51 @@
+
+
 header {
   height: 100px;
   background-color: #4caf50;
   color: #fff;
   text-align: center;
-  position: relative;
-  overflow: hidden
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-img {
-    width: 100px;
-    height: 100px;
+.logo img {
+  width: 100px;
+  height: 100px;
+
 }
 
-.logo {
-  position: absolute;
+.title {
+  margin-left: 180px;
+  flex-grow: 1;
 }
 
 header h1 {
   font-size: 44px;
   color: #282c35;
-  padding-top: 30px;
-  text-align: center;
   margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: #282c35;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ddd;
 }
