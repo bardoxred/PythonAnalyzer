@@ -1,18 +1,49 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Main Page</title>
     <link rel="stylesheet" , type="text/css" , href="{% static 'css/main.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
 </head>
 
 <body>
 
-{% include 'header.html' %}
+    {% include 'header.html' %}
 
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <img src="{% static 'images/slider_one.png' %}" alt="Slider one">
+                <img src="{% static 'images/slider_two.png' %}" alt="Slider two">
+                <img src="{% static 'images/slider_five.png' %}" alt="Slider five">
+            </div>
 
-{% include 'footer.html' %}
+            <div class="slide">
+                <img src="{% static 'images/slider_four.png' %}" alt="Slider four">
+
+                <img src="{% static 'images/slider_three.png' %}" alt="Slider three">
+                <img src="{% static 'images/slider_six.png' %}" alt="Slider six">
+            </div>
+
+        </div>
+        <button class="left" onclick="changeSlide(-1)">❮</button>
+        <button class="right" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <div class="main_text">
+        Strona internetowa umożliwiająca analizę danych z plików Excel przy użyciu biblioteki pandas stanowi niezwykle
+        użyteczne narzędzie do eksploracyjnej analizy danych. Dzięki wbudowanym funkcjom, użytkownicy mogą łatwo
+        importować dane z arkuszy kalkulacyjnych, a następnie generować interaktywne wykresy przy użyciu pandas i innych
+        bibliotek Python, takich jak matplotlib czy seaborn. Ta funkcjonalność pozwala szybko zobaczyć podstawowe
+        informacje o danych, identyfikować wzorce oraz prezentować wyniki w atrakcyjny sposób. To narzędzie staje się
+        nieocenione w procesie podejmowania decyzji biznesowych i prowadzenia analizy danych, oferując intuicyjny
+        interfejs do eksploracji zgromadzonych informacji.
+    </div>
+    {% include 'footer.html' %}
 
 </body>
+
 </html>
