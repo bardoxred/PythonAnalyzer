@@ -10,33 +10,34 @@
 
 <body>
 
-    {% include 'header.html' %}
+{% include 'header.html' %}
 
-    <div class="registration-form">
-        <h1>Register your account</h1>
-        <form>
-            <label for="first_name">First name: </label>
-            <input type="text" id="first_name" name="first_name" required>
+<div class="registration-form">
+    <h1>Register your account</h1>
+    <form method="post" action="/register/">
+        {% csrf_token %}
+        <label for="first_name">First name: </label>
+        <input type="text" id="first_name" name="first_name" required>
 
-            <label for="last_name">Last name: </label>
-            <input type="text" id="last_name" name="last_name" required>
+        <label for="last_name">Last name: </label>
+        <input type="text" id="last_name" name="last_name" required>
 
-            <label for="username">Username: </label>
-            <input type="text" id="username" name="username" required>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" required>
 
-            <label for="password">Password:</label>
-            <div class="password-container">
-                <input type="password" id="password" name="password" required>
-                <button type="button" class="toggle-password-button" id="togglePassword">Show</button>
-            </div>
+        <label for="password">Password:</label>
+        <div class="password-container">
+            <input type="password" id="password" name="password" required>
+            <button type="button" class="toggle-password-button" id="togglePassword">Show</button>
+        </div>
 
-            <button class="register-button" type="submit">Register</button>
-        </form>
-    </div>
+        <button class="register-button" type="submit">Register</button>
+    </form>
+</div>
 
-    {% include 'footer.html' %}
+{% include 'footer.html' %}
 
-    <script>
+<script>
         document.getElementById('togglePassword').addEventListener('click', function () {
             var passwordInput = document.getElementById('password');
             if (passwordInput.type === 'password') {
@@ -47,7 +48,9 @@
                 this.innerText = 'Show';
             }
         });
-    </script>
+
+
+</script>
 </body>
 
 </html>
