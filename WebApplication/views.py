@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login, logout
+from WebApplication.models import User
 
 
 # Create your views here.
@@ -29,4 +29,10 @@ def logout_user(request):
     return redirect("login.html")
 
 
-# return render(request, 'login.html')
+def register_user(request):
+    if request.method == "POST":
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        password = request.POST['password']
+
